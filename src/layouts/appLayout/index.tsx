@@ -1,25 +1,26 @@
+"use client";
+
 import { ReactElement } from "react";
 
-import { Container } from "./styles";
+import { IReactChildren } from "../../interfaces/core";
+import {
+    LayoutContainer,
+    StyledContent,
+    StyledHeader,
+    StyledIconHeaderContainer,
+    StyledSideBar,
+} from "./styles";
 
-export const AppLayout = (): ReactElement => {
-    return <Container></Container>;
-};
+export const AppLayout = ({ children }: IReactChildren): ReactElement => {
+    return (
+        <LayoutContainer>
+            <StyledHeader />
 
-const Header = (): ReactElement => {
-    return <></>;
-};
-Header.displayName = "Header";
-AppLayout.Header = Header;
+            <StyledIconHeaderContainer />
 
-const SideBar = (): ReactElement => {
-    return <></>;
-};
-SideBar.displayName = "SideBar";
-AppLayout.SideBar = SideBar;
+            <StyledSideBar></StyledSideBar>
 
-const Content = (): ReactElement => {
-    return <></>;
+            <StyledContent>{children}</StyledContent>
+        </LayoutContainer>
+    );
 };
-Content.displayName = "Content";
-AppLayout.Content = Content;

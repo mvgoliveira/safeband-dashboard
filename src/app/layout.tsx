@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ReactElement } from "react";
-import StyledComponentsRegistry from "@/lib/registry";
 
-const inter = Inter({ subsets: ["latin"] });
+import { AppLayout } from "../layouts/appLayout";
+import StyledComponentsRegistry from "../lib/registry";
+import ClientThemeWrapper from "./client-theme-wrapper";
+
+const roboto = Roboto({ weight: ["100", "300", "400", "500", "700", "900"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "SafeBand",
@@ -18,8 +21,12 @@ export default function RootLayout({
 }>): ReactElement {
     return (
         <html lang="pt-br">
-            <body className={inter.className}>
-                <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+            <body className={roboto.className}>
+                <StyledComponentsRegistry>
+                    <ClientThemeWrapper>
+                        <AppLayout>{children}</AppLayout>
+                    </ClientThemeWrapper>
+                </StyledComponentsRegistry>
             </body>
         </html>
     );

@@ -12,7 +12,7 @@ import React, { ComponentProps, ReactElement } from "react";
 import { MdClose } from "react-icons/md";
 
 import { PopoverContent, PopoverClose, PopoverArrow } from "./styles";
-import { Theme } from "@/themes";
+import { Theme } from "../../themes";
 
 const Popover = ({
 	children,

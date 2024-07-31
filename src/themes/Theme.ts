@@ -76,7 +76,6 @@ export const Theme = {
     },
     fontFamily: {
         roboto: "'Roboto', sans-serif",
-        inter: "'Inter', sans-serif",
     },
     fontWeight: {
         regular: 400,

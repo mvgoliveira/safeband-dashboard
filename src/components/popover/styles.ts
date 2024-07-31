@@ -1,4 +1,4 @@
-import { Theme } from "@/themes";
+import { Theme } from "../../themes";
 import { Content, Arrow, Close } from "@radix-ui/react-popover";
 import styled, { keyframes } from "styled-components";
 
