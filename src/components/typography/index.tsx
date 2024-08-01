@@ -1,7 +1,7 @@
-import { IReactChildren } from "../../interfaces/core";
-import { Theme } from "../../themes/Theme";
 import React, { ReactElement } from "react";
 
+import { IReactChildren } from "../../interfaces/core";
+import { Theme } from "../../themes/Theme";
 import { StyledTypography } from "./styles";
 
 type FontSizeBreakpoints = {
