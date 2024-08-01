@@ -41,6 +41,8 @@ export const StyledUserProfile = styled.div`
 `;
 
 export const ImageContainer = styled.div`
+    width: 32px;
+    height: 32px;
     overflow: hidden;
     border-radius: 4px;
 `;
