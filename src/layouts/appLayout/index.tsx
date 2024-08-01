@@ -37,7 +37,15 @@ export const AppLayout = ({ children }: IReactChildren): ReactElement => {
 
             <StyledSideBar>
                 <SideBar>
-                    <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: 5,
+                            height: "100%",
+                            padding: 15,
+                        }}
+                    >
                         <SideBar.Item
                             icon={
                                 <MdOutlineHome
@@ -131,7 +139,10 @@ export const AppLayout = ({ children }: IReactChildren): ReactElement => {
                         />
                     </div>
 
-                    <SideBar.UserProfile />
+                    <SideBar.UserProfile
+                        imageUrl="https://avatars.githubusercontent.com/u/53785487?v=4"
+                        username="Marcus Oliveira"
+                    />
                 </SideBar>
             </StyledSideBar>
 

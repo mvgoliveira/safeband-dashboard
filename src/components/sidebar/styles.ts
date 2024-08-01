@@ -5,7 +5,7 @@ export const StyledSidebar = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px;
+    height: 100%;
 `;
 
 export const StyledItem = styled(Link)<{ active: boolean }>`
@@ -32,4 +32,14 @@ export const StyledDivider = styled.hr`
     margin: 10px 0;
 `;
 
-export const StyledUserProfile = styled.div``;
+export const StyledUserProfile = styled.div`
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    border-top: 1px solid ${({ theme }) => theme.colors.gray30};
+`;
+
+export const ImageContainer = styled.div`
+    overflow: hidden;
+    border-radius: 4px;
+`;

@@ -1,8 +1,15 @@
 import { Typography } from "@/components/typography";
 import { IReactChildren } from "@/interfaces/core";
+import Image from "next/image";
 import { ReactElement } from "react";
 
-import { StyledDivider, StyledItem, StyledSidebar, StyledUserProfile } from "./styles";
+import {
+    ImageContainer,
+    StyledDivider,
+    StyledItem,
+    StyledSidebar,
+    StyledUserProfile,
+} from "./styles";
 
 export const SideBar = ({ children }: IReactChildren): ReactElement => {
     return <StyledSidebar> {children} </StyledSidebar>;
@@ -41,8 +48,41 @@ const Divider = (): ReactElement => {
 Divider.displayName = "Divider";
 SideBar.Divider = Divider;
 
-const UserProfile = (): ReactElement => {
-    return <StyledUserProfile></StyledUserProfile>;
+interface IUserProfileProps {
+    imageUrl: string;
+    username: string;
+}
+
+const UserProfile = ({ imageUrl, username }: IUserProfileProps): ReactElement => {
+    return (
+        <StyledUserProfile>
+            <ImageContainer>
+                <Image src={imageUrl} width={32} height={32} alt={"Profile Image"} />
+            </ImageContainer>
+
+            <div style={{ display: "flex", flexDirection: "column" }}>
+                <Typography
+                    tag="p"
+                    color="black"
+                    fontFamily="roboto"
+                    fontSize={{ xs: "fs75" }}
+                    fontWeight="bold"
+                >
+                    {username}
+                </Typography>
+
+                <Typography
+                    tag="p"
+                    color="gray70"
+                    fontFamily="roboto"
+                    fontSize={{ xs: "fs50" }}
+                    fontWeight="regular"
+                >
+                    Editar perfil
+                </Typography>
+            </div>
+        </StyledUserProfile>
+    );
 };
 UserProfile.displayName = "UserProfile";
 SideBar.UserProfile = UserProfile;

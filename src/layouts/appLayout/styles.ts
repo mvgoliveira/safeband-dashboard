@@ -32,7 +32,7 @@ export const StyledSideBar = styled.aside`
     position: fixed;
     top: 50px;
     box-sizing: border-box;
-    min-height: calc(100vh - 50px);
+    height: calc(100vh - 50px);
     width: 250px;
     z-index: 960;
     border-right: 1px solid ${({ theme }) => theme.colors.gray30};
