@@ -34,12 +34,42 @@ export const StyledDivider = styled.hr`
 
 export const StyledUserProfile = styled.div`
     display: flex;
-    gap: 10px;
     padding: 20px;
     border-top: 1px solid ${({ theme }) => theme.colors.gray30};
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const ImageContainer = styled.div`
     overflow: hidden;
     border-radius: 4px;
+`;
+
+export const ButtonContainer = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover {
+        background: ${({ theme }) => theme.colors.gray10};
+        border: 1px solid ${({ theme }) => theme.colors.gray30};
+        margin: -1px;
+        border-radius: 4px;
+    }
+`;
+
+export const LinkContainer = styled.button`
+    display: flex;
+    border: none;
+    background: transparent;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline ${({ theme }) => theme.colors.gray50};
+    }
 `;
