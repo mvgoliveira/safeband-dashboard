@@ -49,7 +49,7 @@ export const AppLayout = ({ children }: IReactChildren): ReactElement => {
                         <SideBar.Item
                             icon={
                                 <MdOutlineHome
-                                    size={16}
+                                    size={17}
                                     color={
                                         pathname === "/" ? Theme.colors.blue50 : Theme.colors.gray60
                                     }
@@ -77,7 +77,7 @@ export const AppLayout = ({ children }: IReactChildren): ReactElement => {
                         <SideBar.Item
                             icon={
                                 <MdOutlineGroup
-                                    size={16}
+                                    size={17}
                                     color={
                                         pathname === "/monitored"
                                             ? Theme.colors.blue50
@@ -110,7 +110,7 @@ export const AppLayout = ({ children }: IReactChildren): ReactElement => {
                         <SideBar.Item
                             icon={
                                 <MdOutlineSettings
-                                    size={15}
+                                    size={16}
                                     color={
                                         pathname === "/settings"
                                             ? Theme.colors.blue50
