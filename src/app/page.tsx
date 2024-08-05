@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@/components/button";
-import { MonitoredCount } from "@/components/monitoredCount";
 import { Typography } from "@/components/typography";
+import { UsersImageAndText } from "@/components/usersImageAndText";
 import { Theme } from "@/themes";
 import Image from "next/image";
 import { ReactElement } from "react";
@@ -61,8 +61,8 @@ export default function Home(): ReactElement {
                     </Button>
                 </ButtonsContainer>
 
-                <MonitoredCount
-                    monitored={[
+                <UsersImageAndText
+                    users={[
                         {
                             name: "Carlos Alberto de Sá",
                             imageUrl: "https://xsgames.co/randomusers/assets/avatars/male/62.jpg",
@@ -76,6 +76,7 @@ export default function Home(): ReactElement {
                             imageUrl: "https://xsgames.co/randomusers/assets/avatars/female/42.jpg",
                         },
                     ]}
+                    text="3 Monitorados"
                 />
             </Content>
 

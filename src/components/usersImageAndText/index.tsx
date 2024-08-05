@@ -4,17 +4,18 @@ import { ReactElement } from "react";
 
 import { Container, ImageContainer, ImagesContainer } from "./styles";
 
-interface IMonitoredCountProps {
-    monitored: {
+interface IUsersImageAndTextProps {
+    users: {
         name: string;
         imageUrl: string;
     }[];
+    text: string;
 }
 
-export const MonitoredCount = ({ monitored }: IMonitoredCountProps): ReactElement => (
+export const UsersImageAndText = ({ users, text }: IUsersImageAndTextProps): ReactElement => (
     <Container>
         <ImagesContainer>
-            {monitored.map(user => (
+            {users.map(user => (
                 <ImageContainer>
                     <Image src={user.imageUrl} fill={true} objectFit="cover" alt={user.name} />
                 </ImageContainer>
@@ -28,7 +29,7 @@ export const MonitoredCount = ({ monitored }: IMonitoredCountProps): ReactElemen
             fontSize={{ xs: "fs75" }}
             fontWeight="regular"
         >
-            {monitored.length} Monitorados
+            {text}
         </Typography>
     </Container>
 );
