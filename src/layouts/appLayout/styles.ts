@@ -18,6 +18,9 @@ export const StyledIconHeaderContainer = styled.header`
     width: 250px;
     height: 50px;
     border-right: 1px solid ${({ theme }) => theme.colors.gray30};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gray30};
+    background: ${({ theme }) => theme.colors.white};
+    overflow: auto;
 `;
 
 export const StyledHeader = styled.header`
@@ -26,6 +29,7 @@ export const StyledHeader = styled.header`
     width: 100%;
     height: 50px;
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray30};
+    background: ${({ theme }) => theme.colors.white};
 `;
 
 export const StyledSideBar = styled.aside`
@@ -36,6 +40,13 @@ export const StyledSideBar = styled.aside`
     width: 250px;
     z-index: 960;
     border-right: 1px solid ${({ theme }) => theme.colors.gray30};
+    background: ${({ theme }) => theme.colors.white};
 `;
 
-export const StyledContent = styled.article``;
+export const StyledContent = styled.article`
+    position: fixed;
+    top: 50px;
+    left: 250px;
+    width: calc(100vw - 250px);
+    height: calc(100vh - 50px);
+`;
